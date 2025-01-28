@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção com Imagens</title>
+    <!-- Link para o TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            background-color: #f7f7f7; /* Fundo levemente cinza */
+            margin: 0; /* Remover margem padrão */
+            padding: 0; /* Remover padding padrão */
+            min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            font-family: 'Overpass', sans-serif;
+            font-size: 2.2rem; /* Fonte um pouco maior que antes */
+        }
+        footer p, footer a {
+            font-size: 1.60rem; /* Aumenta a fonte no footer */
+        }
+        footer a {
+            text-decoration: underline; /* Sublinha os links */
+        }
+        main {
+            flex-grow: 1; /* Faz com que a seção principal ocupe o espaço disponível, empurrando o footer para baixo */
+        }
+
+        /* Ajuste para a imagem ter a mesma largura que o texto */
+        .image-container {
+            width: 100%; /* A largura será 100% da largura do texto */
+            height: auto; /* A altura será proporcional ao cumprimento */
+            object-fit: cover; /* Garantir que a imagem cubra o espaço sem distorcer */
+        }
+    </style>
+</head>
+<body>
+    <header class="flex items-center justify-between p-6 border-b-2 border-gray-200">
+        <!-- CV no canto esquerdo -->
+        <a href="index.html" class="text-2xl hover:underline flex-shrink-0">danieldeorange@gmail.com</a>
+        
+        <!-- Nomes distribuídos uniformemente no centro -->
+        <nav class="flex flex-1 justify-evenly">
+            <a href="sobre.html" class="text-2xl hover:underline">Sobre</a>
+            <a href="cv.html" class="text-2xl hover:underline">CV</a>
+        </nav>
+        
+        <!-- Versão em inglês no canto direito -->
+        <a href="english.html" class="text-2xl hover:underline flex-shrink-0">English Version</a>
+    </header>
+    
+    <!-- Seção com texto centralizado e uma imagem -->
+    <main>
+        <section class="flex justify-center p-6 mt-16 relative">
+            <div class="absolute left-0 top-0 p-6 text-6xl text-black">
+                <p id="sobre">CV</p>
+            </div>
+            <div class="w-11/12 md:w-2/5 text-left ml-16">
+                <!-- Currículo substituindo o parágrafo original -->
+                <section class="bg-gray p-8 rounded-none shadow-none">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Currículo</h2>
+    
+                    <article class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">Perfil Profissional</h3>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Nos últimos cinco anos, tenho me dedicado a resolver desafios educacionais e de análise de dados...
+                        </p>
+                    </article>
+    
+                    <article class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">Formação Acadêmica</h3>
+                        <ul class="list-disc pl-6 text-gray-700 text-lg leading-relaxed">
+                            <li>
+                                <strong>Mestrado em Administração</strong> – Universidade Federal Rural de Pernambuco
+                                <ul class="list-disc pl-6">
+                                    <li>Dissertação: Análise de dados da Política de Combate à Pobreza Rural...</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Graduação em Administração</strong> – Universidade de Pernambuco
+                            </li>
+                        </ul>
+                    </article>
+    
+                    <article class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">Experiência Profissional</h3>
+                        <ul class="list-disc pl-6 text-gray-700 text-lg leading-relaxed">
+                            <li>
+                                <strong>Tríade Educacional</strong> – Consultor Educacional e de Projetos
+                                <ul class="list-disc pl-6">
+                                    <li>Reestruturei a informação do AVA utilizando Learning Analytics...</li>
+                                    <li>Desenvolvi planilhas automatizadas com PROCV...</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Uninassau</strong> – Professor de Ciência da Computação
+                                <ul class="list-disc pl-6">
+                                    <li>Ministrava disciplinas com foco na aplicação prática de ciência de dados...</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>[Guia de Bolso] Pensamento Computacional</strong> – Desenvolvedor e Designer de Produtos Educacionais
+                                <ul class="list-disc pl-6">
+                                    <li>Desenvolvimento de tecnologia chatbot para suporte e engajamento...</li>
+                                </ul>
+                            </li>
+                            <!-- Outras experiências seguem aqui -->
+                        </ul>
+                    </article>
+    
+                    <article class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">Habilidades Técnicas</h3>
+                        <ul class="list-disc pl-6 text-gray-700 text-lg leading-relaxed">
+                            <li>Análise de Dados: Python (Pandas, NumPy, Matplotlib, Seaborn), R, Excel, Power BI</li>
+                            <li>Programação e Protótipos: C++, JavaScript (Johnny-Five), Python (Chatbots, Visão Computacional)</li>
+                            <li>Metodologias Ágeis: Experiência com Scrum, PMBOK e gestão de indicadores</li>
+                            <li>Educação Inovadora: PBL, aprendizagem baseada em evidências, aprendizagem visível</li>
+                        </ul>
+                    </article>
+    
+                    <article>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">Idiomas</h3>
+                        <ul class="list-disc pl-6 text-gray-700 text-lg leading-relaxed">
+                            <li>Espanhol: Avançado</li>
+                            <li>Inglês: Avançado</li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </section>
+        
+        <footer class="mt-16 py-8 text-center text-gray-600">
+        </footer>
+        
+        
+        
+
+        <footer class="p-6 border-t-2 border-black">
+            <!-- Contêiner flex para alinhamento no topo -->
+            <div class="flex flex-col sm:flex-row justify-between items-start">
+              <!-- Nome alinhado à esquerda no topo -->
+              <p class="text-left w-full sm:w-auto font-semibold">&copy; Daniel Orange</p>
+              
+              <!-- Endereço centralizado no topo -->
+              <p class="text-center w-full sm:w-auto">São Paulo, SP, Brasil</p>
+              
+              <!-- Links com "Me siga" alinhados no topo à direita -->
+              <div class="flex flex-col items-start w-full sm:w-auto mt-4 sm:mt-0">
+                <p class="font-semibold text-left">Me siga</p>
+                <div class="flex flex-col items-start space-y-2">
+                  <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com" class="hover:underline">LinkedIn</a>
+                    <a href="https://www.instagram.com" class="hover:underline">Instagram</a>
+                  </div>
+                  <div class="flex space-x-6">
+                    <a href="https://www.researchgate.net" class="hover:underline">ResearchGate</a>
+                    <a href="https://lattes.cnpq.br" class="hover:underline">Lattes</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </main>
+</body>
+</html>
