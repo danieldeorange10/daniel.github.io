@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção com Imagens</title>
+    <!-- Link para o TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            background-color: #f7f7f7; /* Fundo levemente cinza */
+            margin: 0; /* Remover margem padrão */
+            padding: 0; /* Remover padding padrão */
+            min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            font-family: 'Overpass', sans-serif;
+            font-size: 2.2rem; /* Fonte um pouco maior que antes */
+        }
+        footer p, footer a {
+            font-size: 1.60rem; /* Aumenta a fonte no footer */
+        }
+        footer a {
+            text-decoration: underline; /* Sublinha os links */
+        }
+        main {
+            flex-grow: 1; /* Faz com que a seção principal ocupe o espaço disponível, empurrando o footer para baixo */
+        }
+
+        /* Ajuste para a imagem ter a mesma largura que o texto */
+        .image-container {
+            width: 100%; /* A largura será 100% da largura do texto */
+            height: auto; /* A altura será proporcional ao cumprimento */
+            object-fit: cover; /* Garantir que a imagem cubra o espaço sem distorcer */
+        }
+    </style>
+</head>
+<body>
+    <header class="flex items-center justify-between p-6 border-b-2 border-gray-200">
+        <!-- CV no canto esquerdo -->
+        <a href="index.html" class="text-xl hover:underline flex-shrink-0">danieldeorange@gmail.com</a>
+        
+        <!-- Nomes distribuídos uniformemente no centro -->
+        <nav class="flex flex-1 justify-evenly">
+            <a href="sobre.html" class="text-xl hover:underline">Sobre</a>
+            <a href="cv.html" class="text-xl hover:underline">CV</a>
+        </nav>
+        
+        <!-- Versão em inglês no canto direito -->
+        <a href="english.html" class="text-xl hover:underline flex-shrink-0">English Version</a>
+    </header>
+    
+    <!-- Seção com texto centralizado e uma imagem -->
+    <main>
+        <section class="flex justify-center p-6 mt-16 relative">
+            <!-- Palavra 'Sobre' -->
+            <div class="absolute left-0 top-0 p-6 text-xl text-gray-600">
+                <p id="sobre">Sobre</p>
+            </div>
+            <div class="w-11/12 md:w-2/5 text-left ml-16">
+                <p class="mb-8 text-xl">
+                    Sou arquiteta e urbanista, com especialização em planejamento urbano e regional, comprovada pelo meu mestrado e doutorado em andamento no Propur-UFRGS (Programa de Pós-Graduação em Planejamento Urbano e Regional) em Porto Alegre.
+
+Estou envolvida em pesquisas desde 2016, tendo contribuído com mais de 25 publicações nas áreas de geografia humana, planejamento urbano e regional. 
+
+Trabalho com análise de dados, análise espacial e técnicas de geoprocessamento, em combinação com programação em Python e SQL. 
+
+Minha experiência no IGOT (Instituto de Geografia e Ordenamento do Território) da Universidade de Lisboa contribuiu para ampliar meu conhecimento em análise espacial e SIG. 
+
+Gosto de trabalhar em grupo e construir conhecimento coletivamente, valores que aplico em minha prática profissional. Busco aprendizado contínuo, seja explorando novos idiomas, culturas, pessoas ou lugares.
+
+Acompanhe minhas pesquisas acadêmicas no ResearchGate
+                </p>
+                <!-- Imagem com legenda -->
+                <div class="flex flex-col items-center">
+                    <img src="C:/Users/daniel/Desktop/carolina/imagens/pro02.JPG" alt="Imagem" class="w-full md:w-full object-cover image-container mb-4">
+                    <p class="text-sm text-gray-600 italic">Legenda: Laboratório Maker implementado em escolas públicas.</p>
+                </div>
+                <!-- Espaço maior antes da citação -->
+                <div class="mt-12">
+                    <blockquote class="border-l-4 border-gray-500 pl-4 italic text-gray-700 text-base">
+                        "A imaginação é mais importante que o conhecimento. Pois o conhecimento é limitado, ao passo que a imaginação abrange o mundo inteiro, estimulando o progresso, dando origem à evolução." 
+                        <span class="block mt-2 text-right">– Albert Einstein</span>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="mt-16 py-8 text-center text-gray-600">
+        </footer>
+        
+        
+        
+
+        <footer class="p-6 border-t-2 border-black">
+            <!-- Contêiner flex para alinhamento no topo -->
+            <div class="flex flex-col sm:flex-row justify-between items-start">
+              <!-- Nome alinhado à esquerda no topo -->
+              <p class="text-left w-full sm:w-auto font-semibold">&copy; Daniel Orange</p>
+              
+              <!-- Endereço centralizado no topo -->
+              <p class="text-center w-full sm:w-auto">São Paulo, SP, Brasil</p>
+              
+              <!-- Links com "Me siga" alinhados no topo à direita -->
+              <div class="flex flex-col items-start w-full sm:w-auto mt-4 sm:mt-0">
+                <p class="font-semibold text-left">Me siga</p>
+                <div class="flex flex-col items-start space-y-2">
+                  <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/danieldeorange/" class="hover:underline">LinkedIn</a>
+                    <a href="https://www.behance.net/danieldeorange" class="hover:underline">Behance</a>
+                  </div>
+                  <div class="flex space-x-6">
+                    <a href="https://www.researchgate.net" class="hover:underline">ResearchGate</a>
+                    <a href="https://lattes.cnpq.br" class="hover:underline">Lattes</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </main>
+</body>
+</html>
